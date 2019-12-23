@@ -34,9 +34,10 @@ function WeatherContainer() {
     // ZipCode validation method 
     function validateZipCode(zipCode) {
         let regex = /[0-9]{5}/;
-        return regex.test(zipCode);
+        return regex.test(zipCode); // return true or false based on Zip code
     }
 
+    //#region /// GET weather Data via API
     function getWeatherData(){
         
         fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${searchQuery},us&appid=${API_KEY}`)
@@ -52,10 +53,11 @@ function WeatherContainer() {
         })
         );
     }
+    //#endregion
 // temperature conversion method
-function convertToFarenheit(temp){
-    return ((temp - 273.15) * (9.0 / 5.0) + 32).toFixed(0);
-}
+    function convertToFarenheit(temp){
+        return ((temp - 273.15) * (9.0 / 5.0) + 32).toFixed(0);
+    }
 
     // #region /// RETURN Statement
     return (

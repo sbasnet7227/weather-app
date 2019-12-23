@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Styles/Weather.css';
-import WeatherContainer from './WeatherContainer';
+// import WeatherContainer from './WeatherContainer';
 
 function WeatherInfo(props){
     const {temp , humidity, desc , city} = props.data;
