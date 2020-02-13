@@ -22,7 +22,7 @@ function WeatherInfo(props){
                 <h4>Humidity</h4> 
                 <p>{humidity}%</p> 
             </div>
-        
+           
         </section>
         
         </React.Fragment>

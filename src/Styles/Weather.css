@@ -70,6 +70,11 @@
     color: #ec7063;
     font-size: 1.3rem;
 }
+.copyRight {
+    text-align: end;
+    color: red;
+    font-size: 1.em;
+}
 .header-description{
     text-align: center;
 

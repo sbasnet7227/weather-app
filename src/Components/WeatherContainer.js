@@ -19,7 +19,9 @@ function WeatherContainer() {
 //#region /// UPDATE SearchQuery Method
     function updateSearchQuery(event) {
         let zipCode = event.target.value;
+        // let city = event.target.value;
         let isValid = validateZipCode(zipCode);
+        
         setSearchQuery(zipCode);
         
         if (isValid || zipCode === '' || isValid.length === 5) {
@@ -63,10 +65,10 @@ function WeatherContainer() {
     return (
         <section className="weather-container">
             <header className="weather-header">
-                <h3>Weather</h3>
+                <h3>Weather-Inforation</h3>
                 <div>
                     <input
-                        placeholder="zip Code"
+                        placeholder="zipcode" 
                         className="search-input"
                         onChange={updateSearchQuery}
                         maxLength= '5'
@@ -81,8 +83,11 @@ function WeatherContainer() {
                     <p>No Weather to Display<i class="material-icons">wb_sunny</i></p>
                 ) : <WeatherInfo data = {weatherData} />
             }
+                      
             </section>
+            <p className="copyRight">@copyright 2020</p>
         </section>
+         
     )
     //#endregion
 }
